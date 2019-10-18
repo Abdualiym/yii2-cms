@@ -7,14 +7,11 @@ use yii\base\BootstrapInterface;
 
 class Bootstrap implements BootstrapInterface
 {
-    /**
-     * @inheritdoc
-     */
+
     public function bootstrap($app)
     {
-        // Add module I18N category.
-        if (!isset($app->i18n->translations['block']) && !isset($app->i18n->translations['block*'])) {
-            $app->i18n->translations['block'] = [
+        if (!isset($app->i18n->translations['cms']) && !isset($app->i18n->translations['cms*'])) {
+            $app->i18n->translations['cms'] = [
                 'class' => 'yii\i18n\PhpMessageSource',
                 'basePath' => __DIR__ . '/messages',
                 'sourceLanguage' => 'en',
