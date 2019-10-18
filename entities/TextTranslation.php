@@ -1,6 +1,6 @@
 <?php
 
-namespace abdualiym\block\entities;
+namespace abdualiym\cms\entities;
 
 use abdualiym\languageClass\Language;
 use abdualiym\menu\entities\Menu;

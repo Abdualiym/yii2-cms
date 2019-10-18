@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $model \abdualiym\block\entities\Block */
+/* @var $model \abdualiym\cms\entities\Block */
 
 $this->title = 'Обновить';
 $this->params['breadcrumbs'][] = ['label' => Yii::t('block', 'Blocks'), 'url' => ['index']];

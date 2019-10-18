@@ -2,11 +2,11 @@
 
 use abdualiym\languageClass\Language;
 use abdualiym\menu\components\MenuSlugHelper;
-use abdualiym\block\entities\Category;
+use abdualiym\cms\entities\Category;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\helpers\Html;
-use abdualiym\block\entities\Text;
+use abdualiym\cms\entities\Text;
 
 
 /* @var $this yii\web\View */

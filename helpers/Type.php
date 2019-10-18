@@ -1,8 +1,8 @@
 <?php
 
-namespace abdualiym\block\helpers;
+namespace abdualiym\cms\helpers;
 
-use abdualiym\block\Module;
+use abdualiym\cms\Module;
 use yii\helpers\VarDumper;
 use yiidreamteam\upload\FileUploadBehavior;
 use yiidreamteam\upload\ImageUploadBehavior;

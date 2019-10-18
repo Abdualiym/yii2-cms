@@ -1,15 +1,15 @@
 <?php
 
-namespace abdualiym\block\services;
+namespace abdualiym\cms\services;
 
 
-use abdualiym\block\entities\Block;
-use abdualiym\block\repositories\BlockRepository;
-use abdualiym\block\entities\Text;
-use abdualiym\block\forms\PhotosForm;
-use abdualiym\block\forms\BlockForm;
-use abdualiym\block\repositories\TextRepository;
-use abdualiym\block\repositories\TextTranslationRepository;
+use abdualiym\cms\entities\Block;
+use abdualiym\cms\repositories\BlockRepository;
+use abdualiym\cms\entities\Text;
+use abdualiym\cms\forms\PhotosForm;
+use abdualiym\cms\forms\BlockForm;
+use abdualiym\cms\repositories\TextRepository;
+use abdualiym\cms\repositories\TextTranslationRepository;
 
 class BlockManageService
 {

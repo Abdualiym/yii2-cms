@@ -1,9 +1,9 @@
 <?php
-namespace abdualiym\block\widgets;
+namespace abdualiym\cms\widgets;
 
 
 use abdualiym\languageClass\Language;
-use abdualiym\block\entities\Text;
+use abdualiym\cms\entities\Text;
 use yii\base\Widget;
 
 class News extends Widget

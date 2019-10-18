@@ -1,11 +1,11 @@
 <?php
 
-namespace abdualiym\block\controllers;
+namespace abdualiym\cms\controllers;
 
-use abdualiym\block\entities\Category;
-use abdualiym\block\forms\CategoryForm;
-use abdualiym\block\forms\CategorySearch;
-use abdualiym\block\services\CategoryManageService;
+use abdualiym\cms\entities\Category;
+use abdualiym\cms\forms\CategoryForm;
+use abdualiym\cms\forms\CategorySearch;
+use abdualiym\cms\services\CategoryManageService;
 use Yii;
 use yii\base\ViewContextInterface;
 use yii\filters\VerbFilter;

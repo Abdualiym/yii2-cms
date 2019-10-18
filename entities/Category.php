@@ -1,10 +1,10 @@
 <?php
 
-namespace abdualiym\block\entities;
+namespace abdualiym\cms\entities;
 
-use abdualiym\block\forms\CategoryForm;
+use abdualiym\cms\forms\CategoryForm;
 use backend\entities\User;
-use abdualiym\block\entities\queries\CategoryQuery;
+use abdualiym\cms\entities\queries\CategoryQuery;
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;

@@ -1,13 +1,13 @@
 <?php
 
-use abdualiym\block\entities\Block;
-use abdualiym\block\helpers\Type;
+use abdualiym\cms\entities\Block;
+use abdualiym\cms\helpers\Type;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
 /* @var $model Block */
-/* @var $module \abdualiym\block\Module */
+/* @var $module \abdualiym\cms\Module */
 
 $this->title = $model->label;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('block', 'Blocks'), 'url' => ['index']];

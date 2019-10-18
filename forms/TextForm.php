@@ -1,9 +1,9 @@
 <?php
 
-namespace abdualiym\block\forms;
+namespace abdualiym\cms\forms;
 
-use abdualiym\block\entities\Category;
-use abdualiym\block\entities\Text;
+use abdualiym\cms\entities\Category;
+use abdualiym\cms\entities\Text;
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
 use yii\web\UploadedFile;

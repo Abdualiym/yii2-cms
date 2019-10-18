@@ -1,6 +1,6 @@
 <?php
 
-namespace abdualiym\block;
+namespace abdualiym\cms;
 
 use yii\base\BootstrapInterface;
 
@@ -23,7 +23,7 @@ class Bootstrap implements BootstrapInterface
         }
 
 //        $app->controllerMap['block'] = [
-//            'class' => 'abdualiym\block\controllers\BlockController',
+//            'class' => 'abdualiym\cms\controllers\BlockController',
 //        ];
     }
 }

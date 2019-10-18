@@ -1,6 +1,6 @@
 <?php
 
-namespace abdualiym\block\entities;
+namespace abdualiym\cms\entities;
 
 use backend\entities\User;
 use Yii;

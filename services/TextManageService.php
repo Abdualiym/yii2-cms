@@ -1,13 +1,13 @@
 <?php
 
-namespace abdualiym\block\services;
+namespace abdualiym\cms\services;
 
 
-use abdualiym\block\entities\Text;
-use abdualiym\block\forms\PhotosForm;
-use abdualiym\block\forms\TextForm;
-use abdualiym\block\repositories\TextRepository;
-use abdualiym\block\repositories\TextTranslationRepository;
+use abdualiym\cms\entities\Text;
+use abdualiym\cms\forms\PhotosForm;
+use abdualiym\cms\forms\TextForm;
+use abdualiym\cms\repositories\TextRepository;
+use abdualiym\cms\repositories\TextTranslationRepository;
 
 class TextManageService
 {

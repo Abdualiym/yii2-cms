@@ -1,11 +1,11 @@
 <?php
 
-use abdualiym\block\entities\Block;
+use abdualiym\cms\entities\Block;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model \abdualiym\block\entities\Block */
+/* @var $model \abdualiym\cms\entities\Block */
 
 $this->title = $model->label;
 $this->params['breadcrumbs'][] = $this->title;

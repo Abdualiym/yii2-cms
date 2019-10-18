@@ -4,8 +4,8 @@ namespace frontend\widgets\tabs;
 
 
 use abdualiym\languageClass\Language;
-use abdualiym\block\entities\Category;
-use abdualiym\block\entities\Text;
+use abdualiym\cms\entities\Category;
+use abdualiym\cms\entities\Text;
 use abdualiym\menu\entities\Menu;
 use Yii;
 use yii\base\Widget;

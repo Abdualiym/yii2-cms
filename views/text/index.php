@@ -2,12 +2,12 @@
 
 use abdualiym\menu\components\MenuSlugHelper;
 use abdualiym\languageClass\Language;
-use abdualiym\block\entities\Text;
+use abdualiym\cms\entities\Text;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
-use abdualiym\block\entities\CategoryTranslation;
-use abdualiym\block\forms\TextForm;
+use abdualiym\cms\entities\CategoryTranslation;
+use abdualiym\cms\forms\TextForm;
 
 /* @var $this yii\web\View */
 /* @var $searchModel abdualiym\text\forms\BlockSearch */

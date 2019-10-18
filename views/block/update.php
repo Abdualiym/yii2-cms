@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $model \abdualiym\block\entities\Block */
+/* @var $model \abdualiym\cms\entities\Block */
 
 $this->title = $model->label;
 $this->params['breadcrumbs'][] = ['label' => $model->label, 'url' => ['view', 'id' => $model->id]];

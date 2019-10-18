@@ -1,12 +1,12 @@
 <?php
 
-use abdualiym\block\helpers\Type;
+use abdualiym\cms\helpers\Type;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $form yii\widgets\ActiveForm */
-/* @var $block \abdualiym\block\entities\Block */
+/* @var $block \abdualiym\cms\entities\Block */
 ?>
 
 <div class="block-form">

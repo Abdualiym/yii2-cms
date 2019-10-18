@@ -1,9 +1,9 @@
 <?php
 
-namespace abdualiym\block\forms;
+namespace abdualiym\cms\forms;
 
 use abdualiym\languageClass\Language;
-use abdualiym\block\entities\Category;
+use abdualiym\cms\entities\Category;
 use elisdn\compositeForm\CompositeForm;
 use yii\helpers\Html;
 use yii\helpers\VarDumper;

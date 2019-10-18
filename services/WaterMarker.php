@@ -1,6 +1,6 @@
 <?php
 
-namespace abdualiym\block\services;
+namespace abdualiym\cms\services;
 
 use PHPThumb\GD;
 use Yii;

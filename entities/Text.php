@@ -1,12 +1,12 @@
 <?php
 
-namespace abdualiym\block\entities;
+namespace abdualiym\cms\entities;
 
 use abdualiym\languageClass\Language;
-use abdualiym\block\helpers\TextHelper;
+use abdualiym\cms\helpers\TextHelper;
 use backend\entities\User;
 use domain\modules\menu\entities\Menu;
-use abdualiym\block\entities\queries\TextQuery;
+use abdualiym\cms\entities\queries\TextQuery;
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
 use yii\behaviors\AttributeBehavior;
 use yii\behaviors\BlameableBehavior;

@@ -1,12 +1,12 @@
 <?php
 
-namespace abdualiym\block\services;
+namespace abdualiym\cms\services;
 
 
-use abdualiym\block\entities\Category;
-use abdualiym\block\forms\CategoryForm;
-use abdualiym\block\repositories\CategoryRepository;
-use abdualiym\block\repositories\CategoryTranslationRepository;
+use abdualiym\cms\entities\Category;
+use abdualiym\cms\forms\CategoryForm;
+use abdualiym\cms\repositories\CategoryRepository;
+use abdualiym\cms\repositories\CategoryTranslationRepository;
 use yii\helpers\VarDumper;
 
 class CategoryManageService

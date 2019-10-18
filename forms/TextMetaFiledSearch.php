@@ -1,9 +1,9 @@
 <?php
 
-namespace abdualiym\block\forms;
+namespace abdualiym\cms\forms;
 
-use abdualiym\block\entities\TextMetaFields;
-use abdualiym\block\helpers\TextHelper;
+use abdualiym\cms\entities\TextMetaFields;
+use abdualiym\cms\helpers\TextHelper;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 

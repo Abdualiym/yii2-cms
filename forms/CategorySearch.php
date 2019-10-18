@@ -1,9 +1,9 @@
 <?php
 
-namespace abdualiym\block\forms;
+namespace abdualiym\cms\forms;
 
-use abdualiym\block\entities\Category;
-use abdualiym\block\helpers\CategoryHelper;
+use abdualiym\cms\entities\Category;
+use abdualiym\cms\helpers\CategoryHelper;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;

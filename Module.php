@@ -1,11 +1,11 @@
 <?php
 
-namespace abdualiym\block;
+namespace abdualiym\cms;
 
 
 /**
  * Class Module
- * @package abdualiym\block
+ * @package abdualiym\cms
  * @property string $storageRoot
  * @property string $storageHost
  * @property array $thumbs

@@ -1,6 +1,6 @@
 <?php
 
-namespace abdualiym\block\forms;
+namespace abdualiym\cms\forms;
 
 use yii\base\Model;
 use yii\web\UploadedFile;

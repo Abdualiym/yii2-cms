@@ -21,7 +21,7 @@ php yii migrate/up --migrationPath=@vendor/abdualiym/yii2-block/migrations
 ```php
 'modules' => [
     'block' => [
-        'class' => '@abdualiym\block\Module',
+        'class' => '@abdualiym\cms\Module',
         'storageRoot' => $params['staticPath'],
         'storageHost' => $params['staticHostInfo'],
         'languages' => [

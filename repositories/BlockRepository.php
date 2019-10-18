@@ -1,6 +1,6 @@
 <?php
 
-namespace abdualiym\block\repositories;
+namespace abdualiym\cms\repositories;
 
 
 use abdualiym\Block\entities\Block;

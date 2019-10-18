@@ -1,7 +1,7 @@
 <?php
 
-use abdualiym\block\entities\Block;
-use abdualiym\block\forms\BlockForm;
+use abdualiym\cms\entities\Block;
+use abdualiym\cms\forms\BlockForm;
 use yii\grid\GridView;
 use yii\helpers\Html;
 

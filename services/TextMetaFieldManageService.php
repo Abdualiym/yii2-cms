@@ -1,15 +1,15 @@
 <?php
 
-namespace abdualiym\block\services;
+namespace abdualiym\cms\services;
 
 
-use abdualiym\block\entities\Text;
-use abdualiym\block\entities\TextMetaFields;
-use abdualiym\block\forms\TextForm;
-use abdualiym\block\forms\TextMetaFieldForm;
-use abdualiym\block\repositories\MetaFieldRepository;
-use abdualiym\block\repositories\TextMetaFieldRepository;
-use abdualiym\block\repositories\TextTranslationRepository;
+use abdualiym\cms\entities\Text;
+use abdualiym\cms\entities\TextMetaFields;
+use abdualiym\cms\forms\TextForm;
+use abdualiym\cms\forms\TextMetaFieldForm;
+use abdualiym\cms\repositories\MetaFieldRepository;
+use abdualiym\cms\repositories\TextMetaFieldRepository;
+use abdualiym\cms\repositories\TextTranslationRepository;
 use yii\helpers\VarDumper;
 
 class TextMetaFieldManageService

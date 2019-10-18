@@ -1,10 +1,10 @@
 <?php
 
-namespace abdualiym\block\controllers;
+namespace abdualiym\cms\controllers;
 
-use abdualiym\block\entities\Block;
-use abdualiym\block\forms\BlockSearch;
-use abdualiym\block\services\BlockManageService;
+use abdualiym\cms\entities\Block;
+use abdualiym\cms\forms\BlockSearch;
+use abdualiym\cms\services\BlockManageService;
 use Yii;
 use yii\base\ViewContextInterface;
 use yii\filters\VerbFilter;

@@ -1,9 +1,9 @@
 <?php
 
-namespace abdualiym\block\repositories;
+namespace abdualiym\cms\repositories;
 
 
-use abdualiym\block\entities\Category;
+use abdualiym\cms\entities\Category;
 
 class CategoryRepository
 {

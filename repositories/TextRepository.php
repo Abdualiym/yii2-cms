@@ -1,9 +1,9 @@
 <?php
 
-namespace abdualiym\block\repositories;
+namespace abdualiym\cms\repositories;
 
 
-use abdualiym\block\entities\Text;
+use abdualiym\cms\entities\Text;
 
 class TextRepository
 {

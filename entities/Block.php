@@ -1,9 +1,9 @@
 <?php
 
-namespace abdualiym\block\entities;
+namespace abdualiym\cms\entities;
 
-use abdualiym\block\helpers\Type;
-use abdualiym\block\validators\SlugValidator;
+use abdualiym\cms\helpers\Type;
+use abdualiym\cms\validators\SlugValidator;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;

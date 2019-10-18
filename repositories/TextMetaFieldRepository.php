@@ -1,9 +1,9 @@
 <?php
 
-namespace abdualiym\block\repositories;
+namespace abdualiym\cms\repositories;
 
 
-use abdualiym\block\entities\TextMetaFields;
+use abdualiym\cms\entities\TextMetaFields;
 
 class TextMetaFieldRepository
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace abdualiym\block\widgets;
+namespace abdualiym\cms\widgets;
 
 
-use abdualiym\block\forms\SearchForm;
+use abdualiym\cms\forms\SearchForm;
 use yii\base\Widget;
 
 class Search extends Widget
