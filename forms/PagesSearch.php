@@ -1,10 +1,18 @@
 <?php
 
+<<<<<<< HEAD
 namespace abdualiym\cms\forms;
+=======
+namespace abdualiym\cms\models;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 
 use abdualiym\cms\entities\Pages;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
+<<<<<<< HEAD
+=======
+use abdualiym\cms\models\Pages;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 
 /**
  * PagesSearch represents the model behind the search form of `Pages`.

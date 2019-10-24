@@ -3,8 +3,13 @@
 namespace abdualiym\cms\controllers;
 
 use Yii;
+<<<<<<< HEAD
 use abdualiym\cms\entities\Menu;
 use abdualiym\cms\entities\MenuSearch;
+=======
+use abdualiym\cms\models\Menu;
+use abdualiym\cms\models\MenuSearch;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

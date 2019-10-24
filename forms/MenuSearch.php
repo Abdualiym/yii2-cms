@@ -1,11 +1,19 @@
 <?php
 
+<<<<<<< HEAD
 namespace abdualiym\cms\entities;
+=======
+namespace abdualiym\cms\models;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
+<<<<<<< HEAD
 use abdualiym\cms\entities\Menu;
+=======
+use abdualiym\cms\models\Menu;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 
 /**
  * MenuSearch represents the model behind the search form of `backend\models\Menu`.

@@ -1,9 +1,17 @@
 <?php
 
+<<<<<<< HEAD
 namespace abdualiym\cms\entities;
 
 use abdualiym\cms\validators\SlugValidator;
 use abdualiym\cms\helpers\LanguageHelper;
+=======
+namespace abdualiym\cms\models;
+
+use abdualiym\cms\entities\user\User;
+use common\helpers\LanguageHelper;
+use common\helpers\StringHelper;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 use Yii;
 use yii\behaviors\TimestampBehavior;
 

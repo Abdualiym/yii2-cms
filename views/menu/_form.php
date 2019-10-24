@@ -3,7 +3,11 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use abdualiym\cms\assets\ScriptsAsset;
+<<<<<<< HEAD
 use abdualiym\cms\entities\Menu;
+=======
+use abdualiym\cms\models\Menu;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 use yii\helpers\ArrayHelper;
 
 

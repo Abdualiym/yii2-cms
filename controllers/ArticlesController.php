@@ -3,8 +3,13 @@
 namespace abdualiym\cms\controllers;
 
 use Yii;
+<<<<<<< HEAD
 use abdualiym\cms\entities\Articles;
 use abdualiym\cms\forms\ArticlesSearch;
+=======
+use abdualiym\cms\models\Articles;
+use abdualiym\cms\models\ArticlesSearch;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

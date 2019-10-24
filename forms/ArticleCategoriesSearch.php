@@ -5,6 +5,10 @@ namespace abdualiym\cms\forms;
 use abdualiym\cms\entities\ArticleCategories;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
+<<<<<<< HEAD
+=======
+use abdualiym\cms\entities\ArticleCategories;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 
 /**
  * ArticleCategoriesSearch represents the model behind the search form of `ArticleCategories`.

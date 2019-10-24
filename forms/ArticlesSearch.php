@@ -1,12 +1,20 @@
 <?php
 
+<<<<<<< HEAD
 namespace abdualiym\cms\forms;
+=======
+namespace abdualiym\cms\models;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 
 use abdualiym\cms\entities\ArticleCategories;
 use abdualiym\cms\entities\Articles;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
+<<<<<<< HEAD
 use yii\helpers\ArrayHelper;
+=======
+use abdualiym\cms\models\Articles;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 
 /**
  * ArticlesSearch represents the model behind the search form of `Articles`.

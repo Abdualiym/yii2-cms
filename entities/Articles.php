@@ -1,7 +1,14 @@
 <?php
 
+<<<<<<< HEAD
 namespace abdualiym\cms\entities;
 
+=======
+namespace abdualiym\cms\models;
+
+use abdualiym\cms\entities\user\User;
+use common\helpers\LanguageHelper;
+>>>>>>> 8b48ef3ca164c7e9625a53ec14596f9d17e4ff8e
 use common\helpers\StringHelper;
 use Yii;
 use yii\behaviors\AttributeBehavior;
