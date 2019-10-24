@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace abdualiym\cms\controllers;
 
 use Yii;
-use backend\models\ArticleCategories;
-use backend\models\ArticleCategoriesSearch;
+use abdualiym\cms\entities\ArticleCategories;
+use abdualiym\cms\forms\ArticleCategoriesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

@@ -2,21 +2,24 @@
 
 The extension allows manage html content block.
 
-## Installation
+### Installation
 
 - Install with composer:
 
 ```bash
-composer require abdualiym/yii2-block
+composer require abdualiym/yii2-cms
 ```
 
 - **After composer install** run console command for create tables:
 
 ```bash
-php yii migrate/up --migrationPath=@vendor/abdualiym/yii2-block/migrations
+php yii migrate/up --migrationPath=@vendor/abdualiym/yii2-cms/migrations
 ```
 
-- Setup in common config storage and language configurations
+- Setup in common config storage and language configurations.
+> language indexes related with database columns.
+
+> Admin panel tabs render by array values order 
 
 ```php
 'modules' => [
@@ -32,3 +35,13 @@ php yii migrate/up --migrationPath=@vendor/abdualiym/yii2-block/migrations
     ],
 ],
 ```
+
+- In admin panel add belove links for manage pages, article categories, articles and menu:
+```php
+/cms/pages/index
+/cms/article-categories/index
+/cms/articles/index
+/cms/menu/index
+```
+
+> CKEditor use Elfinder plugin for save files and images. Refer [Elfinder readme](https://github.com/MihailDev/yii2-elfinder) for proper configuration

@@ -1,10 +1,10 @@
 <?php
 
-use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\ArticleCategoriesSearch */
+/* @var $searchModel ArticleCategoriesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('app', 'Categories');
@@ -22,8 +22,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'title_ru',
-            'alias',
+            'title_0',
+            'slug',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -1,11 +1,13 @@
 <?php
 
+use abdualiym\cms\entities\Articles;
+use mihaildev\elfinder\ElFinder;
+use sadovojav\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use sadovojav\ckeditor\CKEditor;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Articles */
+/* @var $model Articles */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -17,39 +19,47 @@ use sadovojav\ckeditor\CKEditor;
 
     <div class="row">
         <div class="col-sm-8">
+
             <div class="box">
                 <div class="box-body">
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#uz" aria-controls="uz" role="tab" data-toggle="tab">O'zbekcha</a></li>
-                        <li role="presentation" class=""><a href="#ru" aria-controls="ru" role="tab" data-toggle="tab">Русский</a></li>
-                        <li role="presentation" class=""><a href="#en" aria-controls="en" role="tab" data-toggle="tab">English</a></li>
+                        <?php foreach (Yii::$app->controller->module->languages as $key => $language) : ?>
+                            <li role="presentation" <?= $key == 0 ? 'class="active"' : '' ?>>
+                                <a href="#<?= $key ?>" aria-controls="<?= $key ?>" role="tab" data-toggle="tab"><?= $language ?></a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                     <div class="tab-content">
                         <br>
-                        <div role="tabpanel" class="tab-pane active" id="uz">
-                            <?= $form->field($model, 'title_uz')->textInput(['maxlength' => true]) ?>
-                            <?= $form->field($model, 'content_uz')->widget(CKEditor::class); ?>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="ru">
-                            <?= $form->field($model, 'title_ru')->textInput(['maxlength' => true]) ?>
-                            <?= $form->field($model, 'content_ru')->widget(CKEditor::class); ?>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="en">
-                            <?= $form->field($model, 'title_en')->textInput(['maxlength' => true]) ?>
-                            <?= $form->field($model, 'content_en')->widget(CKEditor::class); ?>
-                        </div>
+                        <?php foreach (Yii::$app->controller->module->languages as $key => $language) : ?>
+                            <div role="tabpanel" class="tab-pane <?= $key == 0 ? 'active' : '' ?>" id="<?= $key ?>">
+                                <?php //= $model->showData($key); ?>
+
+                                <?= $form->field($model, 'title_' . $key)->textInput(['maxlength' => true]) ?>
+                                <?= $form->field($model, 'content_' . $key)->widget(CKEditor::class, [
+                                    'editorOptions' => ElFinder::ckeditorOptions('elfinder', [
+//                            'allowedContent' => true,
+                                        'extraPlugins' => 'image2,widget,oembed,video',
+                                        'language' => Yii::$app->language,
+                                        'height' => 300,
+                                    ]),
+                                ]); ?>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="col-sm-4">
+
             <div class="box">
                 <div class="box-body">
-                    <?= $form->field($model, 'category_id')->dropDownList(\yii\helpers\ArrayHelper::map(\backend\models\ArticleCategories::find()->all(), 'id', 'title'), ['prompt' => '---']) ?>
-                    <?php
-                    echo $form->field($model, 'photo')->widget(\kartik\file\FileInput::class, [
+                    <?= $form->field($model, 'category_id')->dropDownList($model->categoriesList(), ['prompt' => '---']) ?>
+
+                    <?= $form->field($model, 'photo')->widget(\kartik\file\FileInput::class, [
                         'options' => ['accept' => 'image/*'],
-                        'language' => 'ru',
+                        'language' => Yii::$app->language,
                         'pluginOptions' => [
                             'showCaption' => false,
                             'showRemove' => false,
@@ -66,10 +76,12 @@ use sadovojav\ckeditor\CKEditor;
                         ],
                     ]);
                     ?>
+
                     <?php
                     $model->date = $model->date ?: time();
                     echo $form->field($model, 'date')->widget(\yii\jui\DatePicker::class, ['dateFormat' => 'd.MM.yyyy', 'clientOptions' => ['changeYear' => true], 'options' => ['class' => 'form-control']]);
                     ?>
+
                     <hr>
                     <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success pull-right']) ?>
                 </div>

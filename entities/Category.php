@@ -3,7 +3,7 @@
 namespace abdualiym\cms\entities;
 
 use abdualiym\cms\forms\CategoryForm;
-use backend\entities\User;
+use abdualiym\cms\entities\User;
 use abdualiym\cms\entities\queries\CategoryQuery;
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
 use yii\behaviors\BlameableBehavior;

@@ -1,14 +1,13 @@
 <?php
 
-namespace backend\models;
+namespace abdualiym\cms\forms;
 
-use Yii;
+use abdualiym\cms\entities\Pages;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Pages;
 
 /**
- * PagesSearch represents the model behind the search form of `backend\models\Pages`.
+ * PagesSearch represents the model behind the search form of `Pages`.
  */
 class PagesSearch extends Pages
 {
@@ -18,8 +17,8 @@ class PagesSearch extends Pages
     public function rules()
     {
         return [
-            [['id', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
-            [['title_ru', 'alias'], 'safe'],
+            [['id', 'created_at', 'updated_at'], 'integer'],
+            [['title_0', 'slug'], 'safe'],
         ];
     }
 
@@ -60,14 +59,12 @@ class PagesSearch extends Pages
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'created_by' => $this->created_by,
-            'updated_by' => $this->updated_by,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['like', 'title_ru', $this->title_ru])
-            ->andFilterWhere(['like', 'alias', $this->alias]);
+        $query->andFilterWhere(['like', 'title_0', $this->title_0])
+            ->andFilterWhere(['like', 'slug', $this->slug]);
 
         return $dataProvider;
     }
