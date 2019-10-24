@@ -1,10 +1,10 @@
 <?php
 
-namespace backend\controllers;
+namespace abdualiym\cms\controllers;
 
 use Yii;
-use backend\models\Menu;
-use backend\models\MenuSearch;
+use abdualiym\cms\models\Menu;
+use abdualiym\cms\models\MenuSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\models;
+namespace abdualiym\cms\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Pages;
+use abdualiym\cms\models\Pages;
 
 /**
  * PagesSearch represents the model behind the search form of `backend\models\Pages`.

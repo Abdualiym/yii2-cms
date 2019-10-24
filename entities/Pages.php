@@ -1,8 +1,8 @@
 <?php
 
-namespace backend\models;
+namespace abdualiym\cms\models;
 
-use backend\entities\user\User;
+use abdualiym\cms\entities\user\User;
 use common\helpers\LanguageHelper;
 use common\helpers\StringHelper;
 use Yii;

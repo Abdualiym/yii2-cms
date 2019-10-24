@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\models;
+namespace abdualiym\cms\forms;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\ArticleCategories;
+use abdualiym\cms\entities\ArticleCategories;
 
 /**
  * ArticleCategoriesSearch represents the model behind the search form of `backend\models\ArticleCategories`.

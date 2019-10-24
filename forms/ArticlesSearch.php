@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\models;
+namespace abdualiym\cms\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Articles;
+use abdualiym\cms\models\Articles;
 
 /**
  * ArticlesSearch represents the model behind the search form of `backend\models\Articles`.

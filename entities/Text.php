@@ -4,7 +4,7 @@ namespace abdualiym\cms\entities;
 
 use abdualiym\languageClass\Language;
 use abdualiym\cms\helpers\TextHelper;
-use backend\entities\User;
+use abdualiym\cmsentities\User;
 use domain\modules\menu\entities\Menu;
 use abdualiym\cms\entities\queries\TextQuery;
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;

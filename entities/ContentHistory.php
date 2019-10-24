@@ -2,7 +2,7 @@
 
 namespace abdualiym\cms\entities;
 
-use backend\entities\User;
+use abdualiym\cms\entities\User;
 use Yii;
 use yii\behaviors\BlameableBehavior;
 use yii\behaviors\TimestampBehavior;
