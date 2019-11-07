@@ -1,14 +1,14 @@
 <?php
 
-namespace abdualiym\cms\models;
+namespace abdualiym\cms\forms;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use abdualiym\cms\models\Menu;
+use abdualiym\cms\entities\Menu;
 
 /**
- * MenuSearch represents the model behind the search form of `backend\models\Menu`.
+ * MenuSearch represents the model behind the search form of `Menu`.
  */
 class MenuSearch extends Menu
 {
@@ -18,8 +18,8 @@ class MenuSearch extends Menu
     public function rules()
     {
         return [
-            [['id', 'parent_id', 'type', 'sort', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
-            [['title', 'type_helper'], 'safe'],
+            [['id', 'parent_id', 'type', 'created_at', 'updated_at'], 'integer'],
+            [['title_0'], 'safe'],
         ];
     }
 
@@ -62,15 +62,11 @@ class MenuSearch extends Menu
             'id' => $this->id,
             'parent_id' => $this->parent_id,
             'type' => $this->type,
-            'sort' => $this->sort,
-            'created_by' => $this->created_by,
-            'updated_by' => $this->updated_by,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'type_helper', $this->type_helper]);
+        $query->andFilterWhere(['like', 'title_0', $this->title_0]);
 
         return $dataProvider;
     }

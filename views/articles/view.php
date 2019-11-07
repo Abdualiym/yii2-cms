@@ -1,23 +1,25 @@
 <?php
 
+use abdualiym\cms\entities\Articles;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use abdualiym\cms\helpers\LanguageHelper;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Articles */
+/* @var $model Articles */
 
-$this->title = $model->title_ru;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Articles'), 'url' => ['index']];
+$this->title = $model->title_0;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Articles'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="articles-view">
 
     <p>
-        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
+        <?= Html::a(Yii::t('cms', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('cms', 'Delete'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                'confirm' => Yii::t('cms', 'Are you sure you want to delete this item?'),
                 'method' => 'post',
             ],
         ]) ?>
@@ -30,15 +32,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= DetailView::widget([
                         'model' => $model,
                         'attributes' => [
-                            'title_uz',
-                            'title_ru',
-                            'title_en',
-                            'alias',
-                            'content_uz:html',
-                            'content_ru:html',
-                            'content_en:html',
+                            'id',
+                            'slug',
                             'status:boolean',
-                            'date:date',
+                            'date:datetime',
+                            'created_at:datetime',
+                            'updated_at:datetime',
                         ],
                     ]) ?>
                 </div>
@@ -48,18 +47,30 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="box">
                 <div class="box-body">
                     <img src="<?= $model->getThumbFileUrl('photo', 'md') ?>">
-                    <?= DetailView::widget([
-                        'model' => $model,
-                        'attributes' => [
-                            'id',
-                            'createdBy.name',
-                            'updatedBy.name',
-                            'created_at:datetime',
-                            'updated_at:datetime',
-                        ],
-                    ]) ?>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="box">
+    <div class="box-body">
+        <ul class="nav nav-tabs" role="tablist">
+            <?php foreach (Yii::$app->controller->module->languages as $key => $language) : ?>
+                <li role="presentation" <?= $key == 0 ? 'class="active"' : '' ?>>
+                    <a href="#<?= $key ?>" aria-controls="<?= $key ?>" role="tab" data-toggle="tab"><?= $language ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <div class="tab-content">
+            <br>
+            <?php foreach (Yii::$app->controller->module->languages as $key => $language) : ?>
+                <div role="tabpanel" class="tab-pane <?= $key == 0 ? 'active' : '' ?>" id="<?= $key ?>">
+                    <h2><?= LanguageHelper::getAttribute($model, 'title', $key); ?></h2>
+                    <div><?= LanguageHelper::getAttribute($model, 'content', $key); ?></div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

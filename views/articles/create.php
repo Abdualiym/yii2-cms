@@ -1,10 +1,12 @@
 <?php
 
-/* @var $this yii\web\View */
-/* @var $model backend\models\Articles */
+use abdualiym\cms\entities\Articles;
 
-$this->title = Yii::t('app', 'Create');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Articles'), 'url' => ['index']];
+/* @var $this yii\web\View */
+/* @var $model Articles */
+
+$this->title = Yii::t('cms', 'Create');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Articles'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="articles-create">

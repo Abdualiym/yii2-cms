@@ -1,31 +1,28 @@
 <?php
 
-namespace abdualiym\cms\models;
+namespace abdualiym\cms\forms;
 
-use Yii;
+use abdualiym\cms\entities\ArticleCategories;
+use abdualiym\cms\entities\Articles;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use abdualiym\cms\models\Articles;
+use yii\helpers\ArrayHelper;
 
 /**
- * ArticlesSearch represents the model behind the search form of `backend\models\Articles`.
+ * ArticlesSearch represents the model behind the search form of `Articles`.
  */
 class ArticlesSearch extends Articles
 {
-    /**
-     * {@inheritdoc}
-     */
+
     public function rules()
     {
         return [
-            [['id', 'date', 'status', 'created_by', 'updated_by', 'created_at', 'updated_at'], 'integer'],
-            [['title_ru', 'alias'], 'safe'],
+            [['id', 'date', 'status', 'category_id'], 'integer'],
+            [['title_0'], 'safe'],
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
+
     public function scenarios()
     {
         // bypass scenarios() implementation in the parent class
@@ -67,15 +64,12 @@ class ArticlesSearch extends Articles
             'id' => $this->id,
             'date' => $this->date,
             'status' => $this->status,
-            'created_by' => $this->created_by,
-            'updated_by' => $this->updated_by,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'category_id' => $this->category_id,
         ]);
 
-        $query->andFilterWhere(['like', 'title_ru', $this->title_ru])
-            ->andFilterWhere(['like', 'alias', $this->alias]);
+        $query->andFilterWhere(['like', 'title_0', $this->title_0]);
 
         return $dataProvider;
     }
+
 }

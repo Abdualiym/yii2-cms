@@ -38,5 +38,5 @@
             <?php $i++;
         } ?>
     </ul>
-    <a class="addresses-link" href="http://uzonline.uz/ru/contacts/offices/"><?= Yii::t('app', 'Addresses of sales offices UZTELECOM') ?></a>
+    <a class="addresses-link" href="http://uzonline.uz/ru/contacts/offices/"><?= Yii::t('cms', 'Addresses of sales offices UZTELECOM') ?></a>
 </div>

@@ -33,7 +33,7 @@ $parent = 0;
                         </li>
                     <?php endforeach; ?>
                 </ul>
-                <a href="<?= $categories[$key]['translations'][0]['slug'] ?>"><?= Yii::t('app', 'Мore info') ?></a>
+                <a href="<?= $categories[$key]['translations'][0]['slug'] ?>"><?= Yii::t('cms', 'Мore info') ?></a>
             </div>
         <?php endforeach; ?>
     </div>

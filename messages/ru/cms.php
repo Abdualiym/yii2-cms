@@ -4,11 +4,9 @@ return [
     # site helpers
     'Created at' => 'Время создания',
     'Updated at' => 'Время обновления',
-    'Created by' => 'Создаль',
-    'Updated by' => 'Обновиль',
     'Category' => 'Категория',
     'Title' => 'Название',
-    'Slug' => 'Алиас',
+    'Slug' => 'Слаг(ЧПУ)',
     'Description' => 'Описание',
     'Photo' => 'Картинка',
     'Date' => 'Дата',

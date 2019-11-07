@@ -1,12 +1,12 @@
 <?php
 
+use mihaildev\elfinder\ElFinder;
+use sadovojav\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use sadovojav\ckeditor\CKEditor;
-use mihaildev\elfinder\ElFinder;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Pages */
+/* @var $model \abdualiym\cms\entities\Pages */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -16,56 +16,38 @@ use mihaildev\elfinder\ElFinder;
 
     <?= $form->errorSummary($model) ?>
 
-    <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
 
     <div class="box">
         <div class="box-body">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#uz" aria-controls="uz" role="tab" data-toggle="tab">O'zbekcha</a></li>
-                <li role="presentation" class=""><a href="#ru" aria-controls="ru" role="tab" data-toggle="tab">Русский</a></li>
-                <li role="presentation" class=""><a href="#en" aria-controls="en" role="tab" data-toggle="tab">English</a></li>
+                <?php foreach (Yii::$app->controller->module->languages as $key => $language) : ?>
+                    <li role="presentation" <?= $key == 0 ? 'class="active"' : '' ?>>
+                        <a href="#<?= $key ?>" aria-controls="<?= $key ?>" role="tab" data-toggle="tab"><?= $language ?></a>
+                    </li>
+                <?php endforeach; ?>
             </ul>
             <div class="tab-content">
                 <br>
-                <div role="tabpanel" class="tab-pane active" id="uz">
-                    <?= $form->field($model, 'title_uz')->textInput(['maxlength' => true]) ?>
-                    <?= $form->field($model, 'content_uz')->widget(CKEditor::class, [
-                        'editorOptions' => ElFinder::ckeditorOptions('elfinder', [
+                <?php foreach (Yii::$app->controller->module->languages as $key => $language) : ?>
+                    <div role="tabpanel" class="tab-pane <?= $key == 0 ? 'active' : '' ?>" id="<?= $key ?>">
+                        <?= $form->field($model, 'title_' . $key)->textInput(['maxlength' => true]) ?>
+                        <?= $form->field($model, 'content_' . $key)->widget(CKEditor::class, [
+                            'editorOptions' => ElFinder::ckeditorOptions('elfinder', [
 //                            'allowedContent' => true,
-                            'extraPlugins' => 'image2,widget,oembed,video',
-                            'language' => Yii::$app->language,
-                            'height' => 300,
-                        ]),
-                    ]); ?>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="ru">
-                    <?= $form->field($model, 'title_ru')->textInput(['maxlength' => true]) ?>
-                    <?= $form->field($model, 'content_ru')->widget(CKEditor::class, [
-                        'editorOptions' => ElFinder::ckeditorOptions('elfinder', [
-                            'allowedContent' => true,
-                            'extraPlugins' => 'image2,widget,oembed,video',
-                            'language' => Yii::$app->language,
-                            'height' => 300,
-                        ]),
-                    ]); ?>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="en">
-                    <?= $form->field($model, 'title_en')->textInput(['maxlength' => true]) ?>
-                    <?= $form->field($model, 'content_en')->widget(CKEditor::class, [
-                        'editorOptions' => ElFinder::ckeditorOptions('elfinder', [
-                            'allowedContent' => true,
-                            'extraPlugins' => 'image2,widget,oembed,video',
-                            'language' => Yii::$app->language,
-                            'height' => 300,
-                        ]),
-                    ]); ?>
-                </div>
+                                'extraPlugins' => 'image2,widget,oembed,video',
+                                'language' => Yii::$app->language,
+                                'height' => 300,
+                            ]),
+                        ]); ?>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('cms', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

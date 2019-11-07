@@ -3,8 +3,8 @@
 namespace abdualiym\cms\controllers;
 
 use Yii;
-use abdualiym\cms\models\Pages;
-use abdualiym\cms\models\PagesSearch;
+use abdualiym\cms\entities\Pages;
+use abdualiym\cms\forms\PagesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -122,6 +122,6 @@ class PagesController extends Controller
             return $model;
         }
 
-        throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+        throw new NotFoundHttpException(Yii::t('cms', 'The requested page does not exist.'));
     }
 }

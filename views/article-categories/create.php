@@ -1,10 +1,10 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\ArticleCategories */
+/* @var $model ArticleCategories */
 
-$this->title = Yii::t('app', 'Create');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Categories'), 'url' => ['index']];
+$this->title = Yii::t('cms', 'Create');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Categories'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="article-categories-create">

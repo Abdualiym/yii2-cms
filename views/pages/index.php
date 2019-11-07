@@ -7,13 +7,13 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\PagesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Pages');
+$this->title = Yii::t('cms', 'Pages');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="pages-index">
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('cms', 'Create'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -22,8 +22,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'title_ru',
-            'alias',
+            'title_0',
+            'slug',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

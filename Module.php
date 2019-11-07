@@ -28,7 +28,7 @@ class Module extends \yii\base\Module
 
     private function validateLanguages()
     {
-        if (count(array_diff_assoc(array_keys($this->languages), $this->dataKeys()))) {
+        if (count(array_diff(array_keys($this->languages), $this->dataKeys()))) {
             throw new \RuntimeException('Language key is invalid. Current support keys range is ' . json_encode($this->dataKeys()));
         }
     }
