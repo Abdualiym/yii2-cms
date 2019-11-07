@@ -3,8 +3,9 @@
 namespace abdualiym\cms\entities;
 
 use abdualiym\cms\validators\SlugValidator;
-use yii\behaviors\TimestampBehavior;
+use common\helpers\LanguageHelper;
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "article_categories".
