@@ -172,7 +172,7 @@ class Menu extends \yii\db\ActiveRecord
             'title' => Yii::t('cms', 'Title'),
             'type' => Yii::t('cms', 'Type'),
             'type_helper' => Yii::t('cms', 'Type Helper'),
-            'sort' => Yii::t('cms', 'Sort'),/
+            'sort' => Yii::t('cms', 'Sort'),
             'created_at' => Yii::t('cms', 'Created At'),
             'updated_at' => Yii::t('cms', 'Updated At'),
         ];
