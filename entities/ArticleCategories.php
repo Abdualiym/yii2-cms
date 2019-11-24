@@ -3,7 +3,7 @@
 namespace abdualiym\cms\entities;
 
 use abdualiym\cms\validators\SlugValidator;
-use common\helpers\LanguageHelper;
+use common\helpers\Language;
 use Yii;
 use yii\behaviors\TimestampBehavior;
 
@@ -42,16 +42,16 @@ class ArticleCategories extends \yii\db\ActiveRecord
     {
         return [
             ['title_0', 'required', 'when' => function () {
-                return in_array(0, $this->CMSModule->languages);
+                return in_array(0, Yii::$app->params['cms']['languageIds']);
             }],
             ['title_1', 'required', 'when' => function () {
-                return in_array(1, $this->CMSModule->languages);
+                return in_array(1, Yii::$app->params['cms']['languageIds']);
             }],
             ['title_2', 'required', 'when' => function () {
-                return in_array(2, $this->CMSModule->languages);
+                return in_array(2, Yii::$app->params['cms']['languageIds']);
             }],
             ['title_3', 'required', 'when' => function () {
-                return in_array(3, $this->CMSModule->languages);
+                return in_array(3, Yii::$app->params['cms']['languageIds']);
             }],
 
             [['title_0', 'title_1', 'title_2', 'title_3', 'slug'], 'string', 'max' => 255],
@@ -68,10 +68,10 @@ class ArticleCategories extends \yii\db\ActiveRecord
      */
     public function attributeLabels()
     {
-        $language0 = $this->CMSModule->languages[0] ?? '';
-        $language1 = $this->CMSModule->languages[1] ?? '';
-        $language2 = $this->CMSModule->languages[2] ?? '';
-        $language3 = $this->CMSModule->languages[3] ?? '';
+        $language0 = Yii::$app->params['cms']['languages2'][0] ?? '';
+        $language1 = Yii::$app->params['cms']['languages2'][1] ?? '';
+        $language2 = Yii::$app->params['cms']['languages2'][2] ?? '';
+        $language3 = Yii::$app->params['cms']['languages2'][3] ?? '';
 
         return [
             'id' => Yii::t('cms', 'ID'),

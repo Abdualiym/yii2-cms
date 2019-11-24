@@ -10,6 +10,9 @@ use abdualiym\cms\forms\MenuSearch;
 
 $this->title = Yii::t('cms', 'Menu');
 $this->params['breadcrumbs'][] = $this->title;
+
+echo \abdualiym\cms\widgets\menu\MenuWidget::widget();
+
 ?>
 <div class="menu-index">
 
@@ -28,7 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'sort',
             'type',
             'created_at:datetime',
-            //'updated_at',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

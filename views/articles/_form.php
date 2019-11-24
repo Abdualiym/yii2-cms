@@ -23,7 +23,7 @@ use yii\widgets\ActiveForm;
             <div class="box">
                 <div class="box-body">
                     <ul class="nav nav-tabs" role="tablist">
-                        <?php foreach (Yii::$app->controller->module->languages as $key => $language) : ?>
+                        <?php foreach (Yii::$app->params['cms']['languages2'] as $key => $language) : ?>
                             <li role="presentation" <?= $key == 0 ? 'class="active"' : '' ?>>
                                 <a href="#<?= $key ?>" aria-controls="<?= $key ?>" role="tab" data-toggle="tab"><?= $language ?></a>
                             </li>
@@ -31,7 +31,7 @@ use yii\widgets\ActiveForm;
                     </ul>
                     <div class="tab-content">
                         <br>
-                        <?php foreach (Yii::$app->controller->module->languages as $key => $language) : ?>
+                        <?php foreach (Yii::$app->params['cms']['languages2'] as $key => $language) : ?>
                             <div role="tabpanel" class="tab-pane <?= $key == 0 ? 'active' : '' ?>" id="<?= $key ?>">
                                 <?php //= $model->showData($key); ?>
 

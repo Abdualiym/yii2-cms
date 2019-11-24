@@ -1,7 +1,7 @@
 <?php
 
 use abdualiym\cms\entities\Pages;
-use abdualiym\cms\helpers\LanguageHelper;
+use abdualiym\cms\helpers\Language;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="box">
         <div class="box-body">
             <ul class="nav nav-tabs" role="tablist">
-                <?php foreach (Yii::$app->controller->module->languages as $key => $language) : ?>
+                <?php foreach (Yii::$app->params['cms']['languages2'] as $key => $language) : ?>
                     <li role="presentation" <?= $key == 0 ? 'class="active"' : '' ?>>
                         <a href="#<?= $key ?>" aria-controls="<?= $key ?>" role="tab" data-toggle="tab"><?= $language ?></a>
                     </li>
@@ -39,10 +39,10 @@ $this->params['breadcrumbs'][] = $this->title;
             </ul>
             <div class="tab-content">
                 <br>
-                <?php foreach (Yii::$app->controller->module->languages as $key => $language) : ?>
+                <?php foreach (Yii::$app->params['cms']['languages2'] as $key => $language) : ?>
                     <div role="tabpanel" class="tab-pane <?= $key == 0 ? 'active' : '' ?>" id="<?= $key ?>">
-                        <h2><?= LanguageHelper::getAttribute($model, 'title', $key); ?></h2>
-                        <div><?= LanguageHelper::getAttribute($model, 'content', $key); ?></div>
+                        <h2><?= Language::getAttribute($model, 'title', $key); ?></h2>
+                        <div><?= Language::getAttribute($model, 'content', $key); ?></div>
                     </div>
                 <?php endforeach; ?>
             </div>
