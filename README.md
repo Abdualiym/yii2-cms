@@ -58,3 +58,28 @@ php yii migrate/up --migrationPath=@vendor/abdualiym/yii2-cms/migrations
 ```
 
 > CKEditor use Elfinder plugin for save files and images. Refer [Elfinder readme](https://github.com/MihailDev/yii2-elfinder) for proper configuration
+
+###Examples
+
+Extension registers next language arrays to Yii::$app->params[] for use in views:
+```php
+\Yii::$app->params['cms']['languageIds'][$prefix] = $language['id'];
+[
+    'en' => 2,
+    'ru' => 1,
+    ...
+]
+
+\Yii::$app->params['cms']['languages'][$prefix] = $language['name'];
+[
+    'en' => 'English',
+    ...
+]
+
+
+\Yii::$app->params['cms']['languages2'][$language['id']] = $language['name'];
+[
+    2 => 'English',
+    ...
+]
+```

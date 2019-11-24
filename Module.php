@@ -45,14 +45,4 @@ class Module extends \yii\base\Module
             throw new \RuntimeException('Language key is invalid. Current support keys range is ' . json_encode(Language::dataKeys()));
         }
     }
-
-//    public function getLanguageById($id)
-//    {
-//        foreach ($this->languages as $language) {
-//            if ($language['id'] == $id){
-//                return $language;
-//            }
-//        }
-//    }
-
 }

@@ -3,9 +3,10 @@
 use abdualiym\cms\helpers\Language;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use abdualiym\cms\entities\Menu;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Menu */
+/* @var $model Menu */
 
 $this->title = $model->title_0;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('cms', 'Menu'), 'url' => ['index']];
@@ -52,14 +53,26 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= DetailView::widget([
                         'model' => $model,
                         'attributes' => [
-                            'parent.title_0',
-                            'sort',
-                            'type',
-//            'type_helper',
-//            'alias',
-                            'link',
-//            'page.title',
-                        ],
+                            [
+                                'attribute' => 'parent_id',
+                                'value' => function (Menu $model) {
+                                    return isset($model->parent) ? $model->parent->title_0 : null;
+                                },
+                                'label' => Yii::t('cms', 'Parent'),
+                            ],
+                            [
+                                'attribute' => 'type',
+                                'value' => function (Menu $model) {
+                                    return $model->typesList($model->type);
+                                },
+                            ],
+                            [
+                                'attribute' => 'type_helper',
+                                'value' => function (Menu $model) {
+                                    return Yii::$app->controller->module->menuActions[$model->type_helper];
+                                },
+                            ],
+                       ],
                     ]) ?>
                 </div>
                 <div class="col-sm-6">
@@ -67,6 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'model' => $model,
                         'attributes' => [
                             'id',
+                            'sort',
                             'created_at:datetime',
                             'updated_at:datetime',
                         ],

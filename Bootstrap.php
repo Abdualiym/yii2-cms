@@ -18,9 +18,5 @@ class Bootstrap implements BootstrapInterface
                 'forceTranslation' => true,
             ];
         }
-
-//        $app->controllerMap['block'] = [
-//            'class' => 'abdualiym\cms\controllers\BlockController',
-//        ];
     }
 }

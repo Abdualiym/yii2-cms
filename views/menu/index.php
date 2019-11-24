@@ -1,8 +1,9 @@
 <?php
 
-use yii\helpers\Html;
-use yii\grid\GridView;
 use abdualiym\cms\forms\MenuSearch;
+use yii\grid\GridView;
+use yii\helpers\Html;
+use abdualiym\cms\entities\Menu;
 
 /* @var $this yii\web\View */
 /* @var $searchModel MenuSearch */
@@ -10,9 +11,6 @@ use abdualiym\cms\forms\MenuSearch;
 
 $this->title = Yii::t('cms', 'Menu');
 $this->params['breadcrumbs'][] = $this->title;
-
-echo \abdualiym\cms\widgets\menu\MenuWidget::widget();
-
 ?>
 <div class="menu-index">
 
@@ -26,10 +24,27 @@ echo \abdualiym\cms\widgets\menu\MenuWidget::widget();
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'parent.title_0',
             'title_0',
+            [
+                'attribute' => 'parent_id',
+                'value' => function (Menu $model) {
+                    return isset($model->parent) ? $model->parent->title_0 : null;
+                },
+                'label' => Yii::t('cms', 'Parent'),
+            ],
+            [
+                'attribute' => 'type',
+                'value' => function (Menu $model) {
+                    return $model->typesList($model->type);
+                },
+            ],
+            [
+                'attribute' => 'type_helper',
+                'value' => function (Menu $model) {
+                    return Yii::$app->controller->module->menuActions[$model->type_helper];
+                },
+            ],
             'sort',
-            'type',
             'created_at:datetime',
 
             ['class' => 'yii\grid\ActionColumn'],
