@@ -96,6 +96,7 @@ class Articles extends \yii\db\ActiveRecord
             'category_id' => Yii::t('cms', 'Category'),
             'date' => Yii::t('cms', 'Date'),
             'status' => Yii::t('cms', 'Status'),
+            'photo' => Yii::t('cms', 'Photo'),
             'content_0' => Yii::t('cms', 'Content') . '(' . $language0 . ')',
             'content_1' => Yii::t('cms', 'Content') . '(' . $language1 . ')',
             'content_2' => Yii::t('cms', 'Content') . '(' . $language2 . ')',
