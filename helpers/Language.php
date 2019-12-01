@@ -13,6 +13,11 @@ class Language
         return $className[$attributeName . '_' . $key];
     }
 
+    public static function get($className, string $attributeName, string $key)
+    {
+        return $className[$attributeName . '_' . $key];
+    }
+
     public static function dataKeys()
     {
         return [0, 1, 2, 3];

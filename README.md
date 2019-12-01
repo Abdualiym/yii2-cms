@@ -7,7 +7,7 @@ The extension allows manage html content block.
 - Install with composer:
 
 ```bash
-composer require abdualiym/yii2-cms
+composer require abdualiym/yii2-cms "^1.0"
 ```
 
 - **After composer install** run console command for create tables:

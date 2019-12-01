@@ -69,7 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             [
                                 'attribute' => 'type_helper',
                                 'value' => function (Menu $model) {
-                                    return Yii::$app->controller->module->menuActions[$model->type_helper];
+                                    return $model->getTypeValue();
                                 },
                             ],
                        ],

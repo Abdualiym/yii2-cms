@@ -127,6 +127,26 @@ class Menu extends \yii\db\ActiveRecord
         }
     }
 
+    public function getTypeValue()
+    {
+        switch ($this->type) {
+            case self::TYPE_ACTION:
+                return $this->CMSModule->menuActions[$this->type_helper];
+                break;
+            case self::TYPE_LINK:
+                return $this->type_helper;
+                break;
+            case self::TYPE_PAGE:
+                return Pages::findOne($this->type_helper)->title_0;
+                break;
+            case self::TYPE_ARTICLES_CATEGORY:
+                return ArticleCategories::findOne($this->type_helper)->title_0;
+                break;
+            default:
+                return $this->type_helper;
+        }
+    }
+
     public function getParents()
     {
         return $this->hasOne(self::class, ['id' => 'parent_id'])->from('menu' . ' m');
