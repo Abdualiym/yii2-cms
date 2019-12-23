@@ -1,4 +1,4 @@
-# yii2-cms extension
+# yii2-block extension
 
 The extension allows manage html content block.
 

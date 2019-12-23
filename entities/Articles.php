@@ -81,10 +81,10 @@ class Articles extends \yii\db\ActiveRecord
      */
     public function attributeLabels()
     {
-        $language0 = Yii::$app->params['cms']['languages2'][0] ?? '';
-        $language1 = Yii::$app->params['cms']['languages2'][1] ?? '';
-        $language2 = Yii::$app->params['cms']['languages2'][2] ?? '';
-        $language3 = Yii::$app->params['cms']['languages2'][3] ?? '';
+        $language0 = isset(Yii::$app->params['cms']['languages2'][0]) ? Yii::$app->params['cms']['languages2'][0] : '';
+        $language1 = isset(Yii::$app->params['cms']['languages2'][1]) ? Yii::$app->params['cms']['languages2'][1] : '';
+        $language2 = isset(Yii::$app->params['cms']['languages2'][2]) ? Yii::$app->params['cms']['languages2'][2] : '';
+        $language3 = isset(Yii::$app->params['cms']['languages2'][3]) ? Yii::$app->params['cms']['languages2'][3] : '';
 
         return [
             'id' => Yii::t('cms', 'ID'),
@@ -112,7 +112,7 @@ class Articles extends \yii\db\ActiveRecord
         return $this->hasOne(ArticleCategories::class, ['id' => 'category_id']);
     }
 
-    public function categoriesList(): array
+    public function categoriesList()
     {
         return ArrayHelper::map(ArticleCategories::find()->asArray()->all(), 'id', 'title_0');
     }
