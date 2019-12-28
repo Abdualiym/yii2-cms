@@ -83,3 +83,7 @@ Extension registers next language arrays to Yii::$app->params[] for use in views
     ...
 ]
 ```
+
+###Frontend widgets integration
+
+Copy from extension root directory example widgets for frontend integration  
