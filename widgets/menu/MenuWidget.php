@@ -49,6 +49,7 @@ class MenuWidget extends Widget
         $array = [];
 
         foreach ($menuModels as $menu) {
+            $array['id'] = $menu->id;
             $array['type'] = $menu->type;
             $array['parent_id'] = $menu->parent_id;
             $array['title_0'] = $menu->title_0;
@@ -70,7 +71,7 @@ class MenuWidget extends Widget
                     break;
             }
 
-            $menuArray[] = $array;
+            $menuArray[$menu->id] = $array;
         }
 
         return $menuArray;
