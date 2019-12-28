@@ -5,8 +5,10 @@ namespace abdualiym\cms\helpers;
 
 class Language
 {
-    public static function getAttribute($className, $attributeName, $key)
+    public static function getAttribute($className, $attributeName, $key = null)
     {
+        $key = isset($key) ? $key : \Yii::$app->language;
+        
         if(is_string($key)){
             $key = \Yii::$app->params['cms']['languageIds'][$key];
         }
