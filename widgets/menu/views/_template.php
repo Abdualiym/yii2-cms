@@ -14,8 +14,10 @@ foreach ($menu as $key => $value) : ?>
             <ul class="dropdown-menu">
                 <?php foreach ($value['childs'] as $key => $childValue) : ?>
                     <?php if (isset($childValue['childs']) && $childValue['childs']) : ?>
-                        <li class="dropdown"><a href="<?= $childValue['link'] ?>" class="dropdown-toggle" data-toggle="dropdown"><?= Language::getAttribute($childValue, 'title', $url) ?> <b
-                                        class="caret"></b></a>
+                        <li class="dropdown">
+                            <a href="<?= $childValue['link'] ?>" class="dropdown-toggle" data-toggle="dropdown">
+                                <?= Language::getAttribute($childValue, 'title', $url) ?> <b class="caret"></b>
+                            </a>
                             <ul class="dropdown-menu">
                                 <?php foreach ($childValue['childs'] as $key => $children) : ?>
                                     <li><a href="<?= $children['link'] ?>"><?= Language::getAttribute($children, 'title', $url) ?></a></li>
