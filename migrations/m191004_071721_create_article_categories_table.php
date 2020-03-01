@@ -32,7 +32,7 @@ class m191004_071721_create_article_categories_table extends Migration
             'updated_at' => $this->integer()->unsigned()->notNull(),
         ], $tableOptions);
 
-        $this->createIndex('index-abdualiym_cms_article_categories-slug', 'abdualiym_cms_article_categories', 'slug');
+        $this->createIndex('index-abdualiym_cms_article_categories-slug', 'abdualiym_cms_article_categories', 'slug', true);
     }
 
     /**
