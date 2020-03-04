@@ -1,6 +1,6 @@
 <?php
 
-use abdualiym\cms\helpers\Language;
+use abdualiym\language\Language;
 
 $url = Yii::$app->language;
 

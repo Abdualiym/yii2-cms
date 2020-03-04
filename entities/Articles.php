@@ -2,6 +2,8 @@
 
 namespace abdualiym\cms\entities;
 
+use abdualiym\slider\entities\Categories;
+use abdualiym\slider\entities\Slides;
 use Yii;
 use yii\behaviors\AttributeBehavior;
 use yii\behaviors\TimestampBehavior;

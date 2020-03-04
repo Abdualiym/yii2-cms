@@ -3,7 +3,7 @@
 namespace abdualiym\cms;
 
 use abdualiym\cms\entities\Menu;
-use abdualiym\cms\helpers\Language;
+use abdualiym\language\Language;
 
 /**
  * Class Module

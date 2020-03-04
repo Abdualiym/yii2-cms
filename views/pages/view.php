@@ -1,7 +1,7 @@
 <?php
 
 use abdualiym\cms\entities\Pages;
-use abdualiym\cms\helpers\Language;
+use abdualiym\language\Language;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 

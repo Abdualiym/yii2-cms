@@ -3,7 +3,7 @@
 use abdualiym\cms\entities\Articles;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use abdualiym\cms\helpers\Language;
+use abdualiym\language\Language;
 
 /* @var $this yii\web\View */
 /* @var $model Articles */

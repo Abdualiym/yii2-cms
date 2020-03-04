@@ -1,6 +1,6 @@
 <?php
 
-use abdualiym\cms\helpers\Language;
+use abdualiym\language\Language;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use abdualiym\cms\entities\Menu;
