@@ -20,6 +20,7 @@
   ],
   "require": {
     "yiisoft/yii2": "~2.0",
+    "abdualiym/yii2-language": "^1.0",
     "zelenin/yii2-slug-behavior": "~1.5.1",
     "kartik-v/yii2-widget-fileinput": "@dev",
     "yii-dream-team/yii2-upload-behavior": "^1.2.3",
