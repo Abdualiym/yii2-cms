@@ -84,6 +84,10 @@ Extension registers next language arrays to Yii::$app->params[] for use in views
 ]
 ```
 
-###Frontend widgets integration
+###Examples for use in frontend see [yii2-language](https://github.com/Abdualiym/yii2-language) extension
 
-Copy from extension root directory example widgets for frontend integration  
+
+---
+
+> TODO 
+ - Copy from extension root directory example widgets for frontend integration  
