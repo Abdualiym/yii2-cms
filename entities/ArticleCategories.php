@@ -96,4 +96,16 @@ class ArticleCategories extends \yii\db\ActiveRecord
             TimestampBehavior::class,
         ];
     }
+
+
+    public function beforeDelete()
+    {
+        if (!parent::beforeDelete()) {
+            return false;
+        }
+
+        Menu::deleteAll(['type' => Menu::TYPE_ARTICLES_CATEGORY, 'type_helper' => $this->id]);
+        return true;
+    }
+
 }

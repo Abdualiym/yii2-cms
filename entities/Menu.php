@@ -246,5 +246,4 @@ class Menu extends \yii\db\ActiveRecord
         }
         parent::afterFind();
     }
-
 }
